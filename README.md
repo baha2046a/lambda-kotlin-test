@@ -1,4 +1,4 @@
-# Blank function (Java)
+# AWS Lambda Test function (Java)
 
 
 

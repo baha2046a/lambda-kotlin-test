@@ -2,7 +2,9 @@
 
 Objective: Try the AWS Lambda Service
 
-Change the last test code into kotlin
+Changes from AWS Lambda Test function Test(Java):
+
+Try to use kotlin instead of Java
 
 Change the return message to a string list of yahoo news headlines
 

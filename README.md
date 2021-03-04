@@ -1,5 +1,5 @@
 # AWS Lambda Test function (Kotlin)
 
-(/result.png)
+![Result](result.png)
 
 

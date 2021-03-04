@@ -11,19 +11,19 @@ import software.amazon.awssdk.services.lambda.model.GetAccountSettingsRequest
 import software.amazon.awssdk.services.lambda.model.GetAccountSettingsResponse
 import java.util.concurrent.CompletableFuture
 
-class HandlerKt : RequestHandler<TestEvent, String> {
+class HandlerKt : RequestHandler<TestEvent, List<String>> {
     companion object {
         @Suppress("JAVA_CLASS_ON_COMPANION")
         private val logger = getLogger(javaClass.enclosingClass)
         private val gson = GsonBuilder().setPrettyPrinting().create()
     }
 
-    override fun handleRequest(event: TestEvent, context: Context): String {
+    override fun handleRequest(event: TestEvent, context: Context): List<String> {
        // log execution details
         logger.info("ENVIRONMENT VARIABLES: {}", gson.toJson(System.getenv()))
         logger.info("CONTEXT: {}", gson.toJson(context))
         logger.info("EVENT: {}", gson.toJson(event))
 
-        return event.message
+        return YahooNewsParser.getNews()//event.message
     }
 }

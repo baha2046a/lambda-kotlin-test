@@ -1,4 +1,4 @@
-# AWS Lambda Test function (Java)
+# AWS Lambda Test function (Kotlin)
 
 
 
